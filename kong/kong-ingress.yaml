@@ -8,12 +8,12 @@ metadata:
   name: ingress-for-brac
 spec:
   rules:
-  - host: brac-feedback.oss.net.bd   # Replace "your-hostname.com" with your desired hostname
+  - host: hostname   # Replace "your-hostname.com" with your desired hostname
     http:
       paths:
       - backend:
           service:
-            name: feedback-api
+            name: feedback-api  # your-backend-api
             port:
               number: 8082
         path: /api
