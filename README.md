@@ -6,8 +6,7 @@ $ k3d cluster create --config config.yaml
 # 3. Deploy mysql in k3d cluster and volume mount on local-host-machine
 Create Data directory:
 # ======================
-mkdir -p /app/data/keycloak
-mkdir /app/data/mysql
+mkdir -p /app/data/keycloak && /app/data/mysql
 
 kubectl apply -f mysql-deployment.yaml
 # 4. Deploy keycloak in k3d cluster and volume mount on local-host-machine. Keycloak connect with mysql db and keycloak deployment with-hostname or without-hostname.
